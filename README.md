@@ -1,5 +1,5 @@
 Este proyecto busca desarrollar una aplicación para ofecer menús variados con base en unos ingredientes que ingrese el usuario.
-Hace parte de la entrega edl ciclo 3 de Misitón TIC 2022.
+Hace parte de la entrega del ciclo 3 de Misión TIC 2022.
 
 Integrantes del equipo:
 1. Lina Paola Soler Franco
