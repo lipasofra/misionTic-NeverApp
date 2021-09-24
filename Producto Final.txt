@@ -1,0 +1,40 @@
+General:
+
+Aplicación dónde se ingresan los alimentos que se tienen en cocina.
+La app ofrece menús con base en los alimentos que se escogen.
+Menú: qué puede cocinar.
+No se especifica el método de preparación (no recetas).
+
+Output: opciones de menús con los ingredientes seleccionados de mayor coincidencia  a menor.
+
+Nicho objetivo:
+1.Gente que quiera comer sano.
+2.Que busque aprovechar los alimentos que tiene en casa en el momento
+3.Queriendo comer balanceado sin contar calorias.
+
+Features:
+1.Opciones de recetas rápidas o más elaboradas
+2.Imágenes por comida elaborada
+
+
+Features avanzados (para considerar según el avance y el tiempo del proyecto):
+1.Que el usuario pueda crear sus propios menús
+2.Que se puedan intercambiar o compartir menus con otros usuarios
+3.Que la app pueda avisar cuándo se va a acabar un alimento.
+4.Dividir alimentos por grupos alimenticios - que los usuarios entiendan (según nicho de mercado)
+5.Contar calorias
+6.Que el usuario pueda agregar alimentos a la BD
+7.Mezclar grupos alimenticios
+8. Botar 7 menús con 1 proteina cada uno, para la semana
+9. Interfaz para CRUD para modificar menús
+
+Notas de la app:
+1.No se pondrán condimentos en la BD
+2.Interfaz sencilla user-friendly
+3.Botón: "sorpréndeme"
+4.Que bote menús que tengan la mayor cantidad de ingredientes
+5.Limitar la cantidad de opciones de alimentos que el usuario puede escoger
+
+
+
+
