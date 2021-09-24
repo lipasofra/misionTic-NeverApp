@@ -1,0 +1,45 @@
+PERFILES DE USUARIO:
+1.Como ama de casa quiero tener opciones de menus para almorzar con los ingredientes que tengo en casa
+2.Como Jhon quiero armar bowls para comer fit y rápido
+3.Como principiante en la cocina quiero ver menús fáciles de hacer para aprender cosas de cocina
+4.Como estudiante quiero lograr una mejor alimentación para tener mayor rendimiento en mis estudios.
+5.Como Lina quiero ahorra tiempo al pensar qué comer para poder dedicarle a las prioridades.
+6.Como Laura quiero utilizar los ingredientes que tengo en casa para no comprar más y ahorrar
+
+REQUISITOS:
+Perfil #1:
+	funcionales:
+	1.Un campo  detexto donde el usuario pueda ingresar los ingredientes que tiene en casa
+	2.Que al ingresar los ingredientes y dar en el boón "sorpréndeme" aparezcan varias opciones de menú.
+	3.La aplicación es amigable e intuitiva con todos los tipos de usuario
+	No funcionales:
+	1.Crear un filtro con base en el texto del field y la BD
+	2.Cuando el usuario ingrese un ingrediente que no están en la BD se genera una petición a los desarrolladores para posible inclusión
+Perfil #2:
+	Funcionales:
+	1.Que los menús sean saludables y balanceados
+	2.Los menús son mostrado con base en la proteína escogida por el usuario.
+	No funcionales:
+	1.La BD va a tener menús armados por nuestro especialista nutricional que incluyan los 3 grupos alimenticios.
+	2.Se filtrarán con base en la proteína y se organizarán teniendo en cuenta la myor cantidad de ingredientes ingresados.
+Perfil #3:
+	Funcionales:
+	1.Que el estudiante pueda diferencias los menús fáciles de los difíciles
+	No funcionales:
+	1.CRear un filtro de facilidad de preparación de los menús
+	2.Los menús tendrán un tag de nivel de dificultad y tag de rapidez.
+PERFIL #4, #5, #6: IGUALES QUE LOS ANTERIORES.
+
+HISTORIAS DE USUARIO:
+1.Como ama de casa quiero tener opciones de menús para almorzar con los ingredientes que tengo en casa. 
+La app tendrá un campo de texto donde el usuario podrá ingresar los ingredientes que tiene en casa y al dar en el botón “sorpréndeme” aparecerán varias opciones de menús. 
+Para ello se creará un filtro con base en el texto del field y la BD, además, cuando el usuario ingrese un ingrediente que no está en la BD se generará una petición a los desarrolladores para posible inclusión.
+
+2.Como estudiante quiero lograr una mejor alimentación para tener mayor rendimiento en mis estudios.
+Los menús de la app serán saludables y balanceados, y serán mostrados con base en las proteínas escogidas por el usuario y la mayor coincidencia de ingedientes.
+Se asegurará que los menús son saludables y balanceados ya que serán aprobados por nuestro especialista en nutrición
+y se asegurará que tengan los 3 grupos alimenticios.
+
+3.Como principiante en la cocina quiero ver menús fáciles de hacer para aprender cosas de cocina. Para ello la app
+tendrá un filtro de facilidad de preparación de menús, ya que cada menú contrará con un tag del nivel de dificultad
+y otro tag con el tiempo aproximado de preparación (sin especificar el método de preparación).
