@@ -35,6 +35,8 @@ Notas de la app:
 4.Que bote menús que tengan la mayor cantidad de ingredientes
 5.Limitar la cantidad de opciones de alimentos que el usuario puede escoger
 
-
+Referencias:
+https://www.instagram.com/p/CT5nsgkp3kM/
+https://www.youtube.com/watch?v=ykLtraQZ0ZQ
 
 
