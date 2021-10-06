@@ -12,22 +12,19 @@ Perfil #1:
 	1.Un campo  detexto donde el usuario pueda ingresar los ingredientes que tiene en casa
 	2.Que al ingresar los ingredientes y dar en el boón "sorpréndeme" aparezcan varias opciones de menú.
 	3.La aplicación es amigable e intuitiva con todos los tipos de usuario
-	No funcionales:
-	1.Crear un filtro con base en el texto del field y la BD
-	2.Cuando el usuario ingrese un ingrediente que no están en la BD se genera una petición a los desarrolladores para posible inclusión
+	4.Crear un filtro con base en el texto del field y la BD
+	5.Cuando el usuario ingrese un ingrediente que no están en la BD se genera una petición a los desarrolladores para posible inclusión
 Perfil #2:
 	Funcionales:
 	1.Que los menús sean saludables y balanceados
 	2.Los menús son mostrado con base en la proteína escogida por el usuario.
-	No funcionales:
-	1.La BD va a tener menús armados por nuestro especialista nutricional que incluyan los 3 grupos alimenticios.
-	2.Se filtrarán con base en la proteína y se organizarán teniendo en cuenta la myor cantidad de ingredientes ingresados.
+	3.La BD va a tener menús armados por nuestro especialista nutricional que incluyan los 3 grupos alimenticios.
+	4.Se filtrarán con base en la proteína y se organizarán teniendo en cuenta la myor cantidad de ingredientes ingresados.
 Perfil #3:
 	Funcionales:
 	1.Que el estudiante pueda diferencias los menús fáciles de los difíciles
-	No funcionales:
-	1.CRear un filtro de facilidad de preparación de los menús
-	2.Los menús tendrán un tag de nivel de dificultad y tag de rapidez.
+	2.CRear un filtro de facilidad de preparación de los menús
+	3.Los menús tendrán un tag de nivel de dificultad y tag de rapidez.
 PERFIL #4, #5, #6: IGUALES QUE LOS ANTERIORES.
 
 HISTORIAS DE USUARIO:
