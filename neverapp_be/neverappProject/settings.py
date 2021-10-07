@@ -73,6 +73,8 @@ REST_FRAMEWORK = {
     )
 }
 
+AUTH_USER_MODEL='neverappApp.User'
+
 ROOT_URLCONF = 'neverappProject.urls'
 
 TEMPLATES = [
@@ -100,10 +102,10 @@ WSGI_APPLICATION = 'neverappProject.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'd37d6ostn75hdk',
-        'USER': 'bswmakkvxarinj',
+        'NAME': 'dcr18172ngv0e6',
+        'USER': 'dgzughbywwcvhp',
         'PASSWORD': '80a00a5d5797d06d3331871919c2eb19fa60e6e554bfea19a229de66f02bc0b9',
-        'HOST': 'ec2-44-194-6-121.compute-1.amazonaws.com',
+        'HOST': 'ec2-54-227-246-76.compute-1.amazonaws.com',
         'PORT': '5432',
     }
 }
