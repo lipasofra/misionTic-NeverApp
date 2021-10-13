@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.urls import path
 from rest_framework_simplejwt.views import (TokenObtainPairView, TokenRefreshView)
-from authApp import views
+from neverappApp import views
 
 urlpatterns = [
     path('login/', TokenObtainPairView.as_view()),
