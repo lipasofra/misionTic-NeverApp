@@ -1,0 +1,91 @@
+PERFILES DE USUARIO:
+1.Como ama de casa quiero tener opciones de menus para almorzar con los ingredientes que tengo en casa
+2.Como Jhon quiero armar bowls para comer fit y rápido
+3.Como principiante en la cocina quiero ver menús fáciles de hacer para aprender cosas de cocina
+4.Como estudiante quiero lograr una mejor alimentación para tener mayor rendimiento en mis estudios.
+5.Como Lina quiero ahorra tiempo al pensar qué comer para poder dedicarle a las prioridades.
+6.Como Laura quiero utilizar los ingredientes que tengo en casa para no comprar más y ahorrar
+
+REQUISITOS:
+Perfil #1:
+	funcionales:
+	1.Un campo  detexto donde el usuario pueda ingresar los ingredientes que tiene en casa
+	2.Que al ingresar los ingredientes y dar en el boón "sorpréndeme" aparezcan varias opciones de menú.
+	3.La aplicación es amigable e intuitiva con todos los tipos de usuario
+	4.Crear un filtro con base en el texto del field y la BD
+	5.Cuando el usuario ingrese un ingrediente que no están en la BD se genera una petición a los desarrolladores para posible inclusión
+Perfil #2:
+	Funcionales:
+	1.Que los menús sean saludables y balanceados
+	2.Los menús son mostrado con base en la proteína escogida por el usuario.
+	3.La BD va a tener menús armados por nuestro especialista nutricional que incluyan los 3 grupos alimenticios.
+	4.Se filtrarán con base en la proteína y se organizarán teniendo en cuenta la myor cantidad de ingredientes ingresados.
+Perfil #3:
+	Funcionales:
+	1.Que el estudiante pueda diferencias los menús fáciles de los difíciles
+	2.CRear un filtro de facilidad de preparación de los menús
+	3.Los menús tendrán un tag de nivel de dificultad y tag de rapidez.
+PERFIL #4, #5, #6: IGUALES QUE LOS ANTERIORES.
+
+HISTORIAS DE USUARIO:
+1.Como ama de casa quiero tener opciones de menús para almorzar con los ingredientes que tengo en casa. 
+La app tendrá un campo de texto donde el usuario podrá ingresar los ingredientes que tiene en casa y al dar en el botón “sorpréndeme” aparecerán varias opciones de menús. 
+Para ello se creará un filtro con base en el texto del field y la BD, además, cuando el usuario ingrese un ingrediente que no está en la BD se generará una petición a los desarrolladores para posible inclusión.
+
+2.Como estudiante quiero lograr una mejor alimentación para tener mayor rendimiento en mis estudios.
+Los menús de la app serán saludables y balanceados, y serán mostrados con base en las proteínas escogidas por el usuario y la mayor coincidencia de ingedientes.
+Se asegurará que los menús son saludables y balanceados ya que serán aprobados por nuestro especialista en nutrición
+y se asegurará que tengan los 3 grupos alimenticios.
+
+3.Como principiante en la cocina quiero ver menús fáciles de hacer para aprender cosas de cocina. Para ello la app
+tendrá un filtro de facilidad de preparación de menús, ya que cada menú contrará con un tag del nivel de dificultad
+y otro tag con el tiempo aproximado de preparación (sin especificar el método de preparación).
+
+
+PRODUCT BACKLOG
+
+	HACER LA LISTA:
+1.Hacer mockups de las páginas
+2.Escoger paleta de coloes y tipografía
+3.Hacer la interfaz gráfica
+	a.de la página principal-buscador
+	b.de la página de resultados-con filtro de tags
+	c.poner la imágenes
+4.Hacer la BD
+	a.Hacer el UML
+	b.Lista de menús
+	c.Crear BD con los menús (con tags)
+	d.Crear BD de alimentos
+5. Crear lógica
+	a.El filtro de la BD con las palabras claves del buscador
+	b.Generación del mensaje de no está el ingrediente
+	c.Asociar palabras claves con menús
+	d.Asociar imágenes con menús
+	e.Relacionar menús con los tags de nivel de dificulad y rapidez.
+
+
+Sprint #2:
+1. Hacer mockups de las páginas
+2. Hacer el UML
+3. Bosquejo del código
+
+Sprint #3:
+1. Hacer la BD
+	a.Lista de menús
+	b.Crear BD con los menús (con tags)
+	c.Crear BD de alimentos
+
+Sprint #4:
+1.Crear lógica:
+	a.El filtro de la BD con las palabras claves del buscador
+	b.Generación del mensaje de no está el ingrediente
+	c.Asociar palabras claves con menús
+	d.Asociar imágenes con menús
+	e.Relacionar menús con los tags de nivel de dificulad y rapidez.
+
+Sprint #5:
+1. Escoger la paleta de colores y tipografía
+2. Hacer la interfaz gráfica
+	a.de la página principal-buscador
+	b.de la página de resultados-con filtro de tags
+	c.poner la imágenes
