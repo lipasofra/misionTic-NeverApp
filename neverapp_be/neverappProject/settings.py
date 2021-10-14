@@ -102,10 +102,10 @@ WSGI_APPLICATION = 'neverappProject.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'dcr18172ngv0e6',
-        'USER': 'dgzughbywwcvhp',
-        'PASSWORD': '80a00a5d5797d06d3331871919c2eb19fa60e6e554bfea19a229de66f02bc0b9',
-        'HOST': 'ec2-54-227-246-76.compute-1.amazonaws.com',
+        'NAME': 'd10evadenghgk7',
+        'USER': 'pozpblgtnxfxav',
+        'PASSWORD': 'fc8809fe02bb84ea015fffcaaf38249eab92b66d140fc71b56b6d7051690841c',
+        'HOST': 'ec2-18-215-96-54.compute-1.amazonaws.com',
         'PORT': '5432',
     }
 }
