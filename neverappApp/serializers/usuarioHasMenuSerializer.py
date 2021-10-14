@@ -2,14 +2,14 @@ from rest_framework import serializers
 from neverappApp.models import menu
 from neverappApp.models.user import User
 from neverappApp.models.menu import Menu
-from neverappApp.serializers.userSerializer import userSerializer
-from neverappApp.serializers.menuSerializer import menuSerializer
+from neverappApp.serializers.userSerializer import UserSerializer
+from neverappApp.serializers.menuSerializer import MenuSerializer
 from neverappApp.models.UsuarioHasMenu import UsuarioHasMenu
 
 
 class usuarioHasMenuSerializer(serializers.ModelSerializer):
-    menu = menuSerializer()
-    user= userSerializer()
+    menu = MenuSerializer()
+    user= UserSerializer()
     class Meta:
         model = UsuarioHasMenu
         fields = ['id', 'user', 'menu']
