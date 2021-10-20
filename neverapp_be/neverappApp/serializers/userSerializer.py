@@ -11,14 +11,14 @@ class UserSerializer(serializers.ModelSerializer):
 
     def create(self, validated_data):
         userInstance = User.objects.create(validated_data)
-        return userInstance       
+        return userInstance
 
     def to_representation(self, obj):
         user = User.objects.get(id=obj.id)
-            
+
         return {
-                    'id': user.id, 
-                    'username': user.username,
-                    'name': user.name,
-                    'email': user.email,
-                }       
+            'id': user.id,
+            'username': user.username,
+            'name': user.name,
+            'email': user.email,
+            }
