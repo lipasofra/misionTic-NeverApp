@@ -2,3 +2,5 @@ from .userCreateView import UserCreateView
 from .userDetailView import UserDetailView
 from .menuCreateView import MenuCreateView
 from .ingredientCreateView import IngredientCreateView
+from .menuHasIngredientsCreateView import MenuHasIngredientCreateView
+from .userHasMenuCreateView import UserHasMenuCreateView
