@@ -3,5 +3,5 @@ from rest_framework import serializers
 
 class IngredientsSerializer (serializers.ModelSerializer):
     class Meta:
-        model=Ingredient
-        fields=['Name Ingredient']
+        model = Ingredient
+        fields = ['Name Ingredient']
