@@ -1,8 +1,7 @@
-from neverappApp.models.ingredients import Ingredients
+from neverappApp.models.ingredients import Ingredient
 from rest_framework import serializers
 
 class IngredientsSerializer (serializers.ModelSerializer):
     class Meta:
-        model=Ingredients
+        model=Ingredient
         fields=['Name Ingredient']
-        
