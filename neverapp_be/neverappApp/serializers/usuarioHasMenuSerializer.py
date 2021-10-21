@@ -1,20 +1,17 @@
 from rest_framework import serializers
-from neverappApp.models import menu
-from neverappApp.models.user import User
-from neverappApp.models.menu import Menu
 from neverappApp.serializers.userSerializer import UserSerializer
 from neverappApp.serializers.menuSerializer import MenuSerializer
 from neverappApp.models.UsuarioHasMenu import UsuarioHasMenu
 
 
-class usuarioHasMenuSerializer(serializers.ModelSerializer):
+class UsuarioHasMenuSerializer(serializers.ModelSerializer):
     menu = MenuSerializer()
     user= UserSerializer()
     class Meta:
         model = UsuarioHasMenu
         fields = ['id', 'user', 'menu']
 
-    def create(self, validated_data):
+    '''def create(self, validated_data):
         accountData = validated_data.pop('account')
         userInstance = User.objects.create(**validated_data)
         Account.objects.create(user=userInstance, **accountData)
@@ -28,4 +25,4 @@ class usuarioHasMenuSerializer(serializers.ModelSerializer):
             'id': UsuarioHasMenu.id,
             'user': user.username,
             'menu': menu.nameMenu,
-        }
+        }'''
