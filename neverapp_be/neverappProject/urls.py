@@ -22,7 +22,7 @@ urlpatterns = [
     path('refresh/', TokenRefreshView.as_view()),
     path('user/', views.UserCreateView.as_view()),
     path('user/<int:pk>/', views.UserDetailView.as_view()),
-    path('createIngredient/', views.IngredientCreateView),
+    path('createIngredient/', views.IngredientCreateView.as_view()),
     path('createMenu/', views.MenuCreateView.as_view()),
     path('createMenuHasIngredient/', views.MenuHasIngredientsCreateView.as_view()),
     path('createUserHasMenu/', views.UserHasMenuCreateView.as_view()),
