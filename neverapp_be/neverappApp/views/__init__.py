@@ -1,6 +1,5 @@
 from .userCreateView import UserCreateView
 from .userDetailView import UserDetailView
-from .menuCreateView import MenuCreateView
+from .menuViewSet import MenuViewSet
 from .ingredientCreateView import IngredientCreateView
-from .menuHasIngredientsCreateView import MenuHasIngredientsCreateView
 from .userHasMenuCreateView import UserHasMenuCreateView

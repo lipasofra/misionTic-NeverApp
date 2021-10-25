@@ -14,6 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.urls import path
+from django.urls.conf import include
 from rest_framework_simplejwt.views import (TokenObtainPairView, TokenRefreshView)
 from neverappApp import views
 
@@ -22,8 +23,8 @@ urlpatterns = [
     path('refresh/', TokenRefreshView.as_view()),
     path('user/', views.UserCreateView.as_view()),
     path('user/<int:pk>/', views.UserDetailView.as_view()),
-    path('createIngredient/', views.IngredientCreateView.as_view()),
-    path('createMenu/', views.MenuCreateView.as_view()),
-    path('createMenuHasIngredient/', views.MenuHasIngredientsCreateView.as_view()),
+    #path('createIngredient/', views.IngredientCreateView.as_view()),
+    #path('createMenu/', views.MenuCreateView.as_view()),
     path('createUserHasMenu/', views.UserHasMenuCreateView.as_view()),
+    path('neverappApp/', include('neverappApp.urls'))
 ]

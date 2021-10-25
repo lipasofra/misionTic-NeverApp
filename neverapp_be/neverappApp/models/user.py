@@ -2,6 +2,8 @@ from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin, BaseUserManager
 from django.contrib.auth.hashers import make_password
 
+from neverappApp.models.menu import Menu
+
 class UserManager(BaseUserManager):
     def create_user(self, username, password=None):
         """
@@ -32,6 +34,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     password = models.CharField('Password', max_length = 256)
     name = models.CharField('Name', max_length = 30)
     email = models.EmailField('Email', max_length = 100)
+    favorite_menus = models.ManyToManyField(Menu)
 
     def save(self, **kwargs):
         some_salt = 'mMUj0DrIK6vgtdIYepkIxN'

@@ -4,4 +4,5 @@ from rest_framework import serializers
 class MenuSerializer (serializers.ModelSerializer):
     class Meta:
         model=Menu
-        fields=['nameMenu', 'timeMenu', 'levelMenu']
+        fields=['nameMenu', 'timeMenu', 'levelMenu', 'ingredients']
+        depth=1
