@@ -5,6 +5,7 @@ import LogIn from './components/LogIn.vue'
 import SignUp from './components/SignUp.vue'
 import Home from './components/Home.vue'
 import Scroll from './components/Scroll.vue'
+import Account from './components/Account.vue'
 
 
 
@@ -32,6 +33,11 @@ const routes = [{
     path: '/user/results',
     name: "results",
     component: Scroll
+  },
+  {
+    path: '/user/account',
+    name: "account",
+    component: Account
   }
 ]
 

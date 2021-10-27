@@ -6,7 +6,7 @@
         <div class="barra">
             <input class="input" type="text" placeholder="Pollo , aceitunas, camaron, brocoli...">
         </div>
-        <button type="submit">Buscar</button>
+        <button type="submit" v-if="!is_auth" v-on:click="loadScroll">Buscar</button>
         
     </div>
    
@@ -22,7 +22,24 @@ export default {
         return {
             username: localStorage.getItem('username') || ""
         }
-    }
+    },
+
+    components: {
+  },
+
+  
+
+  methods:{
+    
+
+    loadScroll: function(){
+      this.$router.push({name: "results"})
+    },
+
+    
+
+
+  },
 }
 
 </script>

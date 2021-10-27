@@ -19,7 +19,7 @@
     
                 <div class="carousel-item">
                     
-                    <h2 class="nombreMenu">Menu 1</h2>  
+                    <h2 class="nombreMenu"><span> {{menu}} </span></h2>  
                     <div class="linea-division"></div>
                     <p class="tiempo">tiempo preparación</p>
                     <p class="dificultad">nivel dificultad</p>              
@@ -86,7 +86,6 @@ export default {
     return {
         user: {
         username: "",
-        password: "",
         },
     };
 },
@@ -119,7 +118,7 @@ export default {
     .nombreMenu{
         font-size: 30px;
         color: black;
-        margin: 0;
+        margin-bottom: 25px;
         display: inline;
         font-weight: 500;
         text-transform: uppercase;
@@ -128,11 +127,11 @@ export default {
 
     .tiempo, .dificultad{
         color: #A03C78;
-        margin: 7px 0;
+        margin-top: 10px;
         font-size: 20px;
         font-weight: 600;
         
-        margin-top: 0;
+        
 
 
     }
@@ -174,69 +173,13 @@ export default {
         border-radius: 15px;
         display:flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-end;
         align-items: center;
         user-select: none;
         margin-left: 20px;
     }
 
    
-
-    .carousel-item__details--title{
-        background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
-        font-size: 50px;
-        opacity: 0;
-        transition: 450ms opacity;
-        padding: 10px;
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-                
-
-    }
-
-    .carousel-item__details--dificultad{
-        
-        font-size: 50px;
-        opacity: 0;
-        transition: 450ms opacity;
-        padding: 10px;
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-
-    }
-
-    .carousel-item__details--tiempo{
-        background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
-        font-size: 50px;
-        opacity: 0;
-        transition: 450ms opacity;
-        padding: 10px;
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-
-    }
-
     
     .carousel-item__details p{
         margin: 0px;
