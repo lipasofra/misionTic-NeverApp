@@ -55,6 +55,7 @@ methods: {
 
 
 <style>
+
     .logIn_user{
     margin: 0;
     padding: 0%;
@@ -63,13 +64,14 @@ methods: {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color:rgba(205, 243, 162, 0.6) ;
 }
 
     .container_logIn_user {
-    border: 3px solid #283747;
-    border-radius: 10px;
+    border: 3px solid #A03C78;
+    border-radius: 20px;
     width: 25%;
-    height: 60%;
+    height: 70%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -77,7 +79,7 @@ methods: {
     }
 
     .logIn_user h2{
-        color: #283747;
+        color: #A03C78;
 }
 
     .logIn_user form{
@@ -90,22 +92,30 @@ methods: {
         box-sizing: border-box;
         padding: 10px 20px;
         margin: 5px 0;
-        border: 1px solid #283747;
+        border: 1px solid #A03C78;
+        background: rgba(255, 255, 255, 0.4);
+        border: 2px solid white;
+        padding-bottom: 10px;
+        border-radius: 25px;
+        color: white;
         }
 
     .logIn_user button{
         width: 100%;
         height: 40px;
         color: #E5E7E9;
-        background: #283747;
+        background: #A03C78;
         border: 1px solid #E5E7E9;
-        border-radius: 5px;
-        padding: 10px 25px;
-        margin: 5px 0;
+        border-radius: 25px;
+        padding: 0px 25px;
+        margin: 10px 0;
+        margin-bottom: 30px;
         }
+
     .logIn_user button:hover{
         color: #E5E7E9;
-        background: crimson;
         border: 1px solid #283747;
+        cursor: pointer;
         }
+
 </style>

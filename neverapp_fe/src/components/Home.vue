@@ -8,9 +8,8 @@
     <div class="barra">
         <input class="input" type="text" placeholder="Pollo , aceitunas, camaron, brocoli...">
     </div>
-    <div class="boton">
-        <input type="submit" value="Buscar">
-    </div>
+    <button type="submit">Buscar</button>
+    
 
 
 </div>
@@ -39,9 +38,10 @@ export default {
 <style>
     .buscador {
         background-color:rgba(205, 243, 162, 0.6) ;
-        padding: 0%;
-        height: 100%;
+        padding-top: 50px;
+        height: 83vh;
         width: 100%;
+        
 
         display: flex;
         flex-direction: column;
@@ -91,7 +91,25 @@ export default {
         align-items: center;
     }
 
-    
+    .buscador button{
+        width: 30%;
+        height: 40px;
+        color: #E5E7E9;
+        background: #A03C78;
+        border: 1px solid #E5E7E9;
+        border-radius: 25px;
+        padding: 0px 25px;
+        margin: 10px 0;
+        margin-bottom: 30px;
+        font-size: 20px;
+        font-family: 'Handlee', cursive;
+    }
+
+    .buscador button:hover{
+        color: #E5E7E9;
+        border: 1px solid #283747;
+        cursor: pointer;
+        }
 
 
 

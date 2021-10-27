@@ -13,7 +13,7 @@
     <div class="header">
       <h1>Neverapp</h1>
 
-       <nav>
+      <nav>
           <button v-if="!is_auth" v-on:click="loadHome">Inicio</button>
           <button v-if="is_auth">Cuenta</button>
           <button v-if="is_auth" v-on:click="logOut"> Cerrar Sesión </button>
@@ -33,10 +33,12 @@
     </div>
 
     <div class="footer">
-        <h3>Neverapp</h3>
-        <h4>Una página para tu comodidad</h4>
+      <h3>Neverapp</h3>
+      <h4>Una página para tu comodidad</h4>      
     </div>
+
   </div>
+  
 </template>
 
 
@@ -115,11 +117,18 @@ export default {
 
 <style>
 
-  .app{
-    height: 100vh;
+  *{
     margin: 0;
-    display: flex; 
-    flex-direction: column;
+    padding: 0;
+    
+  }
+
+  
+  .main-component{
+    min-height: 90vh;
+    margin: 0%;
+    padding: 0%;
+    background: rgba(205, 243, 162, 0.6);
   }
 
   .header{
@@ -141,6 +150,7 @@ export default {
   .header h1{
     font-size: 100%;
     text-align: center;
+    padding-left: 10px;
   }
 
   .header nav {
@@ -168,15 +178,6 @@ export default {
   }
 
   
-  .main-component{
-    height: 75vh;
-    margin: 0%;
-    padding: 0%;
-
-    background: #FDFEFE ;
-  }
-
- 
   .footer{
     margin: 0%;
     padding: 0;
@@ -192,13 +193,21 @@ export default {
     justify-content: space-between;
     align-items: center;
 
+    position: fixed;
+    bottom: 0;
+
   }
 
-  .footer h2{
+  .footer h3{
     height: 50%;
-    
+    padding-left: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
   }
+
+  .footer h4{
+    padding-right: 10px;
+  }
+
 </style>
