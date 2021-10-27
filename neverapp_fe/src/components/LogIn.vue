@@ -57,30 +57,31 @@ methods: {
 <style>
 
     .logIn_user{
-    margin: 0;
-    padding: 0%;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color:rgba(205, 243, 162, 0.6) ;
-}
+        margin: 0;
+        padding: 0%;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color:rgba(205, 243, 162, 0.6) ;
+        min-height: 90vh;
+    }
 
     .container_logIn_user {
-    border: 3px solid #A03C78;
-    border-radius: 20px;
-    width: 25%;
-    height: 70%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+        border: 3px solid #A03C78;
+        border-radius: 20px;
+        width: 30%;
+        height: 70%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     .logIn_user h2{
         color: #A03C78;
-}
+    }
 
     .logIn_user form{
         width: 70%;
@@ -98,7 +99,7 @@ methods: {
         padding-bottom: 10px;
         border-radius: 25px;
         color: white;
-        }
+    }
 
     .logIn_user button{
         width: 100%;
@@ -110,7 +111,7 @@ methods: {
         padding: 0px 25px;
         margin: 10px 0;
         margin-bottom: 30px;
-        }
+    }
 
     .logIn_user button:hover{
         color: #E5E7E9;

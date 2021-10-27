@@ -38,7 +38,7 @@ export default {
 <style>
     .buscador {
         background-color:rgba(205, 243, 162, 0.6) ;
-        padding-top: 50px;
+        padding: 0%;
         height: 83vh;
         width: 100%;
         

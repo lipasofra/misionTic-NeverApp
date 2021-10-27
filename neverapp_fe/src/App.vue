@@ -117,20 +117,13 @@ export default {
 
 <style>
 
-  *{
+  .app{
     margin: 0;
     padding: 0;
+        
+  }
+
     
-  }
-
-  
-  .main-component{
-    min-height: 90vh;
-    margin: 0%;
-    padding: 0%;
-    background: rgba(205, 243, 162, 0.6);
-  }
-
   .header{
     margin: 0%;
     padding: 0;
@@ -208,6 +201,7 @@ export default {
 
   .footer h4{
     padding-right: 10px;
+    color:#A03C78;
   }
 
 </style>
