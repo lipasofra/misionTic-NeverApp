@@ -1,16 +1,26 @@
 <template>
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
+    <title>Neverapp</title>
+  </head>
+
   <div id="app" class="app">
 
     <div class="header">
+      <h1>Neverapp</h1>
 
-      <h1>NEVERAPP</h1>
-      <nav>
-        <button v-if="!is_auth" v-on:click="loadHome">Inicio</button>
-        <button v-if="is_auth">Cuenta</button>
-        <button v-if="is_auth" v-on:click="logOut"> Cerrar Sesión </button>
-        <button v-if="!is_auth" v-on:click="loadLogIn">Iniciar Sesión</button>
-        <button v-if="!is_auth" v-on:click="loadSignUp">Registrarse</button>
-      </nav>
+       <nav>
+          <button v-if="!is_auth" v-on:click="loadHome">Inicio</button>
+          <button v-if="is_auth">Cuenta</button>
+          <button v-if="is_auth" v-on:click="logOut"> Cerrar Sesión </button>
+          <button v-if="!is_auth" v-on:click="loadLogIn">Iniciar Sesión</button>
+          <button v-if="!is_auth" v-on:click="loadSignUp">Registrarse</button>
+          <button v-if="!is_auth" v-on:click="loadScroll"> Scroll </button>
+        </nav>
     </div>
 
     <div class="main-component">
@@ -22,8 +32,9 @@
       </router-view>
     </div>
 
-  <div class="footer">
-      <h2>Neverapp</h2>
+    <div class="footer">
+        <h3>Neverapp</h3>
+        <h4>Una página para tu comodidad</h4>
     </div>
   </div>
 </template>
@@ -48,7 +59,7 @@ export default {
     verifyAuth: function() {
       this.is_auth = localStorage.getItem("isAuth") || false;
 
-    if(this.is_auth == false)
+      if(this.is_auth == false)
         this.$router.push({name: "home"})
     },
 
@@ -60,31 +71,35 @@ export default {
       this.$router.push({name: "signUp"})
     },
 
-    loadHome: function() {
-this.$router.push({ name: "home" });
-},
+    loadScroll: function(){
+      this.$router.push({name: "results"})
+    },
 
-logOut: function () {
-localStorage.clear();
-alert("Sesión Cerrada");
-this.verifyAuth();
-},
+    loadHome: function() {
+      this.$router.push({ name: "home" });
+    },
+
+    logOut: function () {
+      localStorage.clear();
+      alert("Sesión Cerrada");
+      this.verifyAuth();
+    },
 
 
     completedLogIn: function(data) {
-localStorage.setItem("isAuth", true);
-localStorage.setItem("username", data.username);
-localStorage.setItem("token_access", data.token_access);
-localStorage.setItem("token_refresh", data.token_refresh);
-alert("Autenticación Exitosa");
-this.verifyAuth();
-},
+      localStorage.setItem("isAuth", true);
+      localStorage.setItem("username", data.username);
+      localStorage.setItem("token_access", data.token_access);
+      localStorage.setItem("token_refresh", data.token_refresh);
+      alert("Autenticación Exitosa");
+      this.verifyAuth();
+    },
 
 
     completedSignUp: function(data) {
-alert("Registro Exitoso");
-this.completedLogIn(data);
-},
+      alert("Registro Exitoso");
+      this.completedLogIn(data);
+    },
 
   },
 
@@ -100,19 +115,23 @@ this.completedLogIn(data);
 
 <style>
 
-  body{
-    margin: 0 0 0 0;
+  .app{
+    height: 100vh;
+    margin: 0;
+    display: flex; 
+    flex-direction: column;
   }
 
   .header{
     margin: 0%;
     padding: 0;
     width: 100%;
-    height: 10vh; 
-    min-height: 100px;
+    height: 5vh; 
+    min-height: 40px;
+    font-family: 'Handlee', cursive;
 
-    background-color: #283747 ;
-    color:#E5E7E9  ;
+    background-color: #93D9A3 ;
+    color:#A03C78  ;
 
     display: flex;
     justify-content: space-between;
@@ -120,28 +139,26 @@ this.completedLogIn(data);
   }
 
   .header h1{
-    width: 20%;
+    font-size: 100%;
     text-align: center;
   }
 
   .header nav {
-    height: 100%;
-    width: 20%;
-
+    width: 53%;
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-end;
+    align-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
     align-items: center;
-
-    font-size: 20px;
   }
 
   .header nav button{
-    color: #E5E7E9;
-    background: #283747;
-    border: 1px solid #E5E7E9;
-
-    border-radius: 5px;
+    color: white;
     padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 12%;
+    border: none;
   }
 
   .header nav button:hover{
@@ -161,20 +178,24 @@ this.completedLogIn(data);
 
  
   .footer{
-    margin: 0;
+    margin: 0%;
     padding: 0;
     width: 100%;
-    height: 10vh;
-    min-height: 100px; 
+    height: 5vh; 
+    min-height: 40px;
+    font-family: 'Handlee', cursive;
 
-    background-color: #283747;
-    color: #E5E7E9;
+    background-color: #93D9A3 ;
+    color:#E5E7E9  ;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
   }
 
   .footer h2{
-    width: 100%;
-    height: 100%;
+    height: 50%;
     
     display: flex;
     justify-content: center;
