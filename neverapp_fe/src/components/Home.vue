@@ -1,22 +1,15 @@
 <template>
- 
+     <div class="buscador">
 
-<div class="buscador">
+        <h2 class="main__title">¿Qué tienes para comer hoy?</h2>
 
-    <h2 class="main__title">¿Qué tienes para comer hoy?</h2>
-
-    <div class="barra">
-        <input class="input" type="text" placeholder="Pollo , aceitunas, camaron, brocoli...">
+        <div class="barra">
+            <input class="input" type="text" placeholder="Pollo , aceitunas, camaron, brocoli...">
+        </div>
+        <button type="submit">Buscar</button>
+        
     </div>
-    <button type="submit">Buscar</button>
-    
-
-
-</div>
-
-
    
-
 </template>
 
 
@@ -39,8 +32,9 @@ export default {
     .buscador {
         background-color:rgba(205, 243, 162, 0.6) ;
         padding: 0%;
-        height: 83vh;
+        height: 100%;
         width: 100%;
+        min-height: 90vh;
         
 
         display: flex;
@@ -75,22 +69,13 @@ export default {
     }
 
     .input{
-
-        background-color: rgba(255, 255, 255, 0);
-        border: none;
-        color: white;
-        
-        
-        font-size: 16px;
-        height: 40px;
-        width: 100%;
-        padding-left: 20px;
-        padding-top: 10px;
+        color: black;
         display: flex;
-        justify-content: flex-start;
+        justify-content: center;
         align-items: center;
     }
 
+    
     .buscador button{
         width: 30%;
         height: 40px;

@@ -98,7 +98,7 @@ methods: {
         border: 2px solid white;
         padding-bottom: 10px;
         border-radius: 25px;
-        color: white;
+        color: black;
     }
 
     .logIn_user button{

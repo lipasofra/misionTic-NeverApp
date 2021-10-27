@@ -57,6 +57,8 @@ export default {
   components: {
   },
 
+  
+
   methods:{
     verifyAuth: function() {
       this.is_auth = localStorage.getItem("isAuth") || false;
@@ -120,7 +122,7 @@ export default {
   .app{
     margin: 0;
     padding: 0;
-        
+    font-family: 'Handlee', cursive;
   }
 
     
@@ -141,7 +143,7 @@ export default {
   }
 
   .header h1{
-    font-size: 100%;
+    font-size: 30px;
     text-align: center;
     padding-left: 10px;
   }
@@ -154,6 +156,10 @@ export default {
     flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    box-shadow: none;
   }
 
   .header nav button{
@@ -197,11 +203,13 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 20px;
   }
 
   .footer h4{
     padding-right: 10px;
     color:#A03C78;
+    font-size: 30px;
   }
 
 </style>

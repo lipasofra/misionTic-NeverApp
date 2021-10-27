@@ -126,7 +126,7 @@ export default {
         border: 2px solid white;
         padding-bottom: 10px;
         border-radius: 25px;
-        color: white;
+        color: black;
     }
 
     .signUp_user button{
