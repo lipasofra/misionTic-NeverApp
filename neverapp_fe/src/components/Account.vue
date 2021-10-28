@@ -2,6 +2,11 @@
     <div class="information">
         <h1>¡Bienvenido <span> {{username}} </span>!</h1>
         <h2>Tus menús favoritos son:</h2>
+
+        <ul class="lista">
+            <li v-for="task of tasks" :key="task">{{ task }}</li>
+        </ul>
+
         <h2><span>{{favoritos}}</span></h2>
         
     </div>
@@ -13,11 +18,15 @@ import axios from 'axios';
 
 export default {
     name: "Account",
+    
     data: function(){
         return {
-            name: "",
-            favoritos: "",
-            loaded: false,
+            username: localStorage.getItem('username') || "none",
+            tasks:[
+                "menu 1",
+                "menu 2",
+                "menu 3"
+            ]
         }
     },
 
@@ -92,4 +101,11 @@ export default {
         color: #A03C78;
         font-weight: bold;
     }
+
+    .lista{
+        color: #A03C78;
+        font-weight: bold;
+        font-size: 50px;
+    }
+
 </style>
