@@ -4,8 +4,6 @@ from django.contrib import admin
 
 from .models.user import User
 from .models.menu import Menu
-from .models.UsuarioHasMenu import UsuarioHasMenu
 
 admin.site.register(User)
 admin.site.register(Menu)
-admin.site.register(UsuarioHasMenu)
