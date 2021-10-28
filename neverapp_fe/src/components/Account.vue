@@ -12,7 +12,7 @@ import jwt_decode from "jwt-decode";
 import axios from 'axios';
 
 export default {
-    name: "account",
+    name: "Account",
     data: function(){
         return {
             name: "",
@@ -22,7 +22,7 @@ export default {
     },
 
     methods: {
-       /* getData: async function () {
+       getData: async function () {
 
             if (localStorage.getItem("token_access") === null || localStorage.getItem("token_refresh") === null) {
                 this.$emit('logOut');
@@ -34,12 +34,11 @@ export default {
             let token = localStorage.getItem("token_access");
             let userId = jwt_decode(token).user_id.toString();
 
-            axios.get(`https://ejemplo-bank-be.herokuapp.com/user/${userId}/`, {headers: {'Authorization': `Bearer ${token}`}})
+            axios.get(`https://neverapp-des.herokuapp.com/user/${userId}/`, {headers: {'Authorization': `Bearer ${token}`}})
 
                 .then((result) => {
-                    this.name = result.data.name;
-                    this.email = result.data.email;
-                    this.balance = result.data.account.balance;
+                    this.name = result.data.user_id;
+                    this.favoritos = result.data.menu_id;
                     this.loaded = true;
                     })
                 .catch(() => {
@@ -48,7 +47,7 @@ export default {
         },
 
         verifyToken: function () {
-            return axios.post("https://ejemplo-bank-be.herokuapp.com/refresh/", {refresh: localStorage.getItem("token_refresh")}, {headers: {}})
+            return axios.post("https://neverapp-des.herokuapp.com/refresh/", {refresh: localStorage.getItem("token_refresh")}, {headers: {}})
 
                 .then((result) => {
                     localStorage.setItem("token_access", result.data.access);
@@ -56,7 +55,7 @@ export default {
                 .catch(() => {
                     this.$emit('logOut');
                 });
-        }*/
+        }
     },
 
     created: async function(){

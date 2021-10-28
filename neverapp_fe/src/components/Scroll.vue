@@ -61,8 +61,6 @@
             </div>
         </section>
 
-        
-
 
     </body>
 
@@ -94,8 +92,6 @@ export default {
     },
 }
 </script>
-
-
 
 
 
@@ -143,8 +139,6 @@ export default {
 
 
     }
-
-
 
     .carousel{
         width: 100%;

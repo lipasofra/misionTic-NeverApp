@@ -2,12 +2,11 @@
   <div class="logIn_user">
     <div class="container_logIn_user">
       <h2>Iniciar sesión</h2>
-
       <form v-on:submit.prevent="processLogInUser">
         <input type="text" v-model="user.username" placeholder="Username" />
-        <br />
+        <br>
         <input type="password" v-model="user.password" placeholder="Password" />
-        <br />
+        <br>
         <button type="submit">Iniciar Sesion</button>
       </form>
     </div>
@@ -15,41 +14,44 @@
 </template>
 
 
-
-
 <script>
 import axios from "axios";
+
 export default {
     name: "LogIn",
-    data: function () {
-    return {
-        user: {
-        username: "",
-        password: "",
-        },
-    };
-},
-methods: {
-    processLogInUser: function () {
-        axios.post("https://neverapp-des.herokuapp.com/login/", this.user, {
-            headers: {},
-        })
-        .then((result) => {
-            let dataLogIn = {
-            username: this.user.username,
-            token_access: result.data.access,
-            token_refresh: result.data.refresh,
-            };
-            this.$emit("completedLogIn", dataLogIn);
-        })
-        .catch((error) => {
 
-            if (error.response.status == "401")
-                alert("ERROR 401: Credenciales Incorrectas.");
-        });
+    data: function () {
+        return {
+            user: {
+                username: "",
+                password: "",
+            },
+        };
     },
-},
-};
+
+    methods: {
+        processLogInUser: function () {
+            axios.post(
+                "https://neverapp-des.herokuapp.com/login/", 
+                this.user, 
+                {headers: {}}
+                )
+                .then((result) => {
+                    let dataLogIn = {
+                        username: this.user.username,
+                        token_access: result.data.access,
+                        token_refresh: result.data.refresh,
+                    }
+
+                    this.$emit("completedLogIn", dataLogIn);
+                })
+                .catch((error) => {
+                     if (error.response.status == "401")
+                    alert("ERROR 401: Credenciales Incorrectas.");
+                });
+        }
+    }
+}
 </script>
 
 
@@ -117,6 +119,6 @@ methods: {
         color: #E5E7E9;
         border: 1px solid #283747;
         cursor: pointer;
-        }
+    }
 
 </style>

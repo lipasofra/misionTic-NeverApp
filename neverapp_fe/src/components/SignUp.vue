@@ -1,34 +1,21 @@
 <template>
-
     <div class="signUp_user">
         <div class="container_signUp_user">
             <h2>Registrarse</h2>
-
             <form v-on:submit.prevent="processSignUp" >
                 <input type="text" v-model="user.username" placeholder="Username">
                 <br>
-                
                 <input type="password" v-model="user.password" placeholder="Password">
-                <br>
-                
+                <br>  
                 <input type="text" v-model="user.name" placeholder="Name">
                 <br>
-
                 <input type="email" v-model="user.email" placeholder="Email">
                 <br>
-
-                
-                <br>
-
                 <button type="submit">Registrarse</button>
             </form>
         </div>
-
     </div>
-
 </template>
-
-
 
 
 <script>
@@ -43,7 +30,7 @@ export default {
                 username: "",
                 password: "",
                 name: "",
-                email: "",
+                email: ""
             
             }
         }
@@ -52,7 +39,7 @@ export default {
     methods: {
         processSignUp: function(){
             axios.post(
-                "https://neverapp-des.herokuapp.com/signup/", 
+                "https://neverapp-des.herokuapp.com/user/", 
                 this.user,  
                 {headers: {}}
             )
@@ -67,17 +54,12 @@ export default {
                 })
                 .catch((error) => {
                     console.log(error)
-                    alert("Error en el resgistro.");
-                    
-                    
+                    alert("Error en el registro.");
                 });
         }
     }
 }
 </script>
-
-
-
 
 
 

@@ -15,7 +15,7 @@
 
       <nav>
           <button v-if="!is_auth" v-on:click="loadHome">Inicio</button>
-          <button v-if="!is_auth" v-on:click="loadAccount">Cuenta</button>
+          <button v-if="is_auth" v-on:click="loadAccount">Cuenta</button>
           <button v-if="is_auth" v-on:click="logOut"> Cerrar Sesión </button>
           <button v-if="!is_auth" v-on:click="loadLogIn">Iniciar Sesión</button>
           <button v-if="!is_auth" v-on:click="loadSignUp">Registrarse</button>
@@ -27,7 +27,9 @@
       <router-view
         v-on:completedLogIn="completedLogIn"
         v-on:completedSignUp="completedSignUp"
+        v-on:loadAccount="loadAccount"
         v-on:logOut="logOut"
+        v-on:loadHome="loadHome"
       >
       </router-view>
     </div>
@@ -63,18 +65,17 @@ export default {
     verifyAuth: function() {
       this.is_auth = localStorage.getItem("isAuth") || false;
 
-      if(this.is_auth == false)
-        this.$router.push({name: "home"})
+      if (this.is_auth == false)
+        this.$router.push({ name: "logIn" });
+      else
+        this.$router.push({ name: "account"});
     },
 
     loadLogIn: function(){
       this.$router.push({name: "logIn"})
     },
 
-    loadAccount: function(){
-      this.$router.push({name: "account"})
-    },
-
+    
     loadSignUp: function(){
       this.$router.push({name: "signUp"})
     },
@@ -83,13 +84,7 @@ export default {
       this.$router.push({ name: "home" });
     },
 
-    logOut: function () {
-      localStorage.clear();
-      alert("Sesión Cerrada");
-      this.verifyAuth();
-    },
-
-
+    
     completedLogIn: function(data) {
       localStorage.setItem("isAuth", true);
       localStorage.setItem("username", data.username);
@@ -103,6 +98,16 @@ export default {
     completedSignUp: function(data) {
       alert("Registro Exitoso");
       this.completedLogIn(data);
+    },
+
+    logOut: function () {
+      localStorage.clear();
+      alert("Sesión Cerrada");
+      this.verifyAuth();
+    },
+
+    loadAccount: function(){
+      this.$router.push({name: "account"})
     },
 
   },
