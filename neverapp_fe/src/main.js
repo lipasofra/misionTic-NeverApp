@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.carousel');
     var instances = M.Carousel.init(elems, {
            duration: 150,
-            dist: -80,
+            dist: -10,
             shift: 5,
             padding: 5,
             numVisible: 3,

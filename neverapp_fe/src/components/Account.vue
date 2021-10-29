@@ -4,10 +4,10 @@
         <h2>Tus menús favoritos son:</h2>
 
         <ul class="lista">
-            <li v-for="task of tasks" :key="task">{{ task }}</li>
+            <li v-for="favorito of favoritos" :key="favorito">{{ favorito }}</li>
         </ul>
 
-        <h2><span>{{favoritos}}</span></h2>
+        
         
     </div>
 </template>
@@ -22,11 +22,8 @@ export default {
     data: function(){
         return {
             username: localStorage.getItem('username') || "none",
-            tasks:[
-                "menu 1",
-                "menu 2",
-                "menu 3"
-            ]
+            favoritos:[],
+            loaded: false,
         }
     },
 
@@ -46,8 +43,7 @@ export default {
             axios.get(`https://neverapp-des.herokuapp.com/user/${userId}/`, {headers: {'Authorization': `Bearer ${token}`}})
 
                 .then((result) => {
-                    this.name = result.data.user_id;
-                    this.favoritos = result.data.menu_id;
+                    this.favoritos = result.data.favorite_menus;
                     this.loaded = true;
                     })
                 .catch(() => {

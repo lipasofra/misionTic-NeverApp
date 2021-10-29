@@ -19,43 +19,43 @@
     
                 <div class="carousel-item">
                     
-                    <h2 class="nombreMenu"><span> {{menu}} </span></h2>  
+                    <h2 class="nombreMenu">{{resultados[0].nameMenu}}</h2>  
                     <div class="linea-division"></div>
-                    <p class="tiempo">tiempo preparación</p>
-                    <p class="dificultad">nivel dificultad</p>              
+                    <p class="tiempo">{{resultados[0].time}}</p>
+                    <p class="dificultad">{{resultados[0].level}}</p>              
                 </div>
 
 
                <div class="carousel-item">
                     
-                    <h2 class="nombreMenu">Menu 2</h2>  
+                    <h2 class="nombreMenu">{{resultados[1].nameMenu}}</h2>  
                     <div class="linea-division"></div>
-                    <p class="tiempo">tiempo preparación 2</p>
-                    <p class="dificultad">nivel dificultad 2</p>              
+                    <p class="tiempo">{{resultados[1].time}}</p>
+                    <p class="dificultad">{{resultados[1].level}}</p>              
+                </div>
+
+               <div class="carousel-item">
+                    
+                    <h2 class="nombreMenu">{{resultados[2].nameMenu}}</h2>  
+                    <div class="linea-division"></div>
+                    <p class="tiempo">{{resultados[2].time}}</p>
+                    <p class="dificultad">{{resultados[2].level}}</p>              
                 </div>
 
                 <div class="carousel-item">
                     
-                    <h2 class="nombreMenu">Menu 3</h2>  
+                    <h2 class="nombreMenu">{{resultados[3].nameMenu}}</h2>  
                     <div class="linea-division"></div>
-                    <p class="tiempo">tiempo preparación</p>
-                    <p class="dificultad">nivel dificultad</p>              
+                    <p class="tiempo">{{resultados[3].time}}</p>
+                    <p class="dificultad">{{resultados[3].level}}</p>              
                 </div>
 
                 <div class="carousel-item">
                     
-                    <h2 class="nombreMenu">Menu 4</h2>  
+                    <h2 class="nombreMenu">{{resultados[4].nameMenu}}</h2>  
                     <div class="linea-division"></div>
-                    <p class="tiempo">tiempo preparación</p>
-                    <p class="dificultad">nivel dificultad</p>              
-                </div>
-
-                <div class="carousel-item">
-                    
-                    <h2 class="nombreMenu">Menu 5</h2>  
-                    <div class="linea-division"></div>
-                    <p class="tiempo">tiempo preparación</p>
-                    <p class="dificultad">nivel dificultad</p>              
+                    <p class="tiempo">{{resultados[4].time}}</p>
+                    <p class="dificultad">{{resultados[4].level}}</p>              
                 </div>
                 
             </div>
@@ -78,18 +78,56 @@ export default {
       M.AutoInit();
     },
 
-    
-
     data: function () {
     return {
-        user: {
-        username: "",
-        },
+        resultados: [
+            {nameMenu: "menu1",
+            time: "2 mins",
+            level: "1",
+            },
+            {nameMenu: "menu2",
+            time: "4 mins",
+            level: "2",
+            },
+            {nameMenu: "menu3",
+            time: "6 mins",
+            level: "1",
+            },
+            {nameMenu: "menu4",
+            time: "8 mins",
+            level: "2",
+            },
+            {nameMenu: "menu5",
+            time: "10 mins",
+            level: "1",
+            },
+            
+        ]
+        
     };
 },
     methods: {
+      /*getData: async function () {
+
         
+
+        axios.get(`https://neverapp-des.herokuapp.com/user/${userId}/`, {headers: {'Authorization': `Bearer ${token}`}})
+
+            .then((result) => {
+                this.favoritos = result.data.favorite_menus;
+                this.loaded = true;
+                })
+            .catch(() => {
+                this.$emit('logOut');
+            });
+        },*/
+
+       
     },
+
+    /*created: async function(){
+        this.getData();
+    },*/
 }
 </script>
 
