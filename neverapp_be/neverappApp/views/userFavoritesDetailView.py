@@ -6,6 +6,7 @@ from rest_framework_simplejwt.backends import TokenBackend
 from rest_framework.permissions import IsAuthenticated
 from neverappApp.models.user import User
 from neverappApp.serializers.userSerializer import UserSerializer
+from neverappApp.serializers.menuSerializer import MenuSerializer
 
 class UserFavoritesDetailView(generics.RetrieveAPIView):
     queryset = User.objects.all()
@@ -17,8 +18,10 @@ class UserFavoritesDetailView(generics.RetrieveAPIView):
         id_usuario = self.request.query_params.get('id_user', None)
         usuario = User.objects.get(id=id_usuario)
 
-        print(usuario)
-        return Response(usuario.favorite_menus.all())
+        #print(usuario)
+        serializer = MenuSerializer(usuario)
+        #return Response(usuario.favorite_menus.all())
+        return Response(serializer.data)
 
 """
         data = request.data

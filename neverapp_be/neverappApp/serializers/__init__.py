@@ -1,3 +1,4 @@
 from .menuSerializer import MenuSerializer
 from .userSerializer import UserSerializer
 from .ingredientsSerializer import IngredientsSerializer
+from .favoritesSerializer import FavoritesSerializer

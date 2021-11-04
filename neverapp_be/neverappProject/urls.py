@@ -23,7 +23,13 @@ urlpatterns = [
     path('refresh/', TokenRefreshView.as_view()),
     path('user/', views.UserCreateView.as_view()),
     path('user/<int:pk>/', views.UserDetailView.as_view()),
-    path('userCreateFavorites/', views.UserFavoritesCreateView.as_view()),
-    path('userDetailFavorites/', views.UserFavoritesDetailView.as_view()),
+    #prueba
+    path('favorites/create/', views.FavoritesCreateView.as_view()),
+    path('favorites/<int:user>/<int:pk>/', views.FavoritesDetailView.as_view()),
+    path('favorites/update/<int:user>/<int:pk>/', views.FavoritesUpdateView.as_view()),
+    path('favorites/remove/<int:user>/<int:pk>/', views.FavoritesDeleteView.as_view()),
+    path('favorites list/<int:user>/', views.FavoritesUserView.as_view()),
+    #path('userCreateFavorites/', views.UserFavoritesCreateView.as_view()),
+    #path('userDetailFavorites/<int:pk>/', views.UserFavoritesDetailView.as_view()),
     path('neverappApp/', include('neverappApp.urls'))
 ]
