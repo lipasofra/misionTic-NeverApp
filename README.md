@@ -7,3 +7,5 @@ Integrantes del equipo:
 3. Cristian Alzate Urrea
 4. Jessica Alejandra Lagos Paredes
 5. Laura Marcela Caicedo Prieto
+
+Para la interfaz se usó Vue.js . El back es en Python con Django. Se desplegó en Heroku. Y se usó bitbucket como repositorio externo mientras se desarrollaba y Jira como herramienta para la gestión de proyecto usando SCRUM.
